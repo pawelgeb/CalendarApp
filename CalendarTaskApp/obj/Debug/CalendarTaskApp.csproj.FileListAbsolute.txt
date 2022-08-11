@@ -1,0 +1,8 @@
+C:\Projects\CalendarTaskApp\CalendarTaskApp\bin\Debug\CalendarTaskApp.exe.config
+C:\Projects\CalendarTaskApp\CalendarTaskApp\bin\Debug\CalendarTaskApp.exe
+C:\Projects\CalendarTaskApp\CalendarTaskApp\bin\Debug\CalendarTaskApp.pdb
+C:\Projects\CalendarTaskApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.csproj.AssemblyReference.cache
+C:\Projects\CalendarTaskApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.csproj.SuggestedBindingRedirects.cache
+C:\Projects\CalendarTaskApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.csproj.CoreCompileInputs.cache
+C:\Projects\CalendarTaskApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.exe
+C:\Projects\CalendarTaskApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.pdb
