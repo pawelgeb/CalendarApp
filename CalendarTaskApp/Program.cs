@@ -1,20 +1,30 @@
-﻿namespace CalendarTaskApp
+﻿using System.Collections.Generic;
+
+namespace CalendarTaskApp
 {
     internal class Program
     {
 
         //todo:
         /* 1. Dla każdego dnia można dodać więcej niż tylko jedno zadanie. Zadania są wyświetlane zgodnie z kolejnością dodawania. *Zadania mają swój priorytet (Priorytet to enum: Low, Medium, High, domyslnie zawsze Medium). Zadania wyświetlamy sortujac po priorytecie. Piorytet trzeba też pokazac
-         * 2. Refaktor, Twój kalendarz ma być osobną klasą, która udostępnia metody publiczne, do jego obsługi. 
+         * 2. Refaktor, Twój kalendarz ma być osobną klasą, która udostępnia metody publiczne, do jego obsługi. Odczyt i zapis pliku powinien być w osobnej klsie (np FileReader i FileWriter)
          * 3. Wyświetlanie tasków dla: dnia, tygodnia, miesiąca. Jeśli user wybierze wyświetlanie, to pytamy o to, czy chce zobaczyć listę wszystkich czy posortowane dla tygodnia/miesiąca/roku - w taki przypapadku grupujemy taski po wybranym.
-         * 4. A może by dodać godzinę?
+         * 4. Usuwanie zadań, które zostały wykonane! ;)
          */
 
         static void Main(string[] args)
         {
 
-            CalendarTask myTask = new CalendarTask();
+            Dictionary<string, List<string>> dictionary = DataReader.Read();
+
+
+
+            CalendarTask myTask = new CalendarTask(dictionary);
             myTask.CalendarAppGo();
+
+
+            DataWriter.Write(myTask.GetDictionary());
+
 
             //todo: Ad2. tutaj ma być pętla czytająca input z klawiatury (1-3) a następnie ma wołać odpowiednie metody z obiektu kalendarz, aby obsługiwać flow
             // read input

@@ -18,15 +18,18 @@ namespace CalendarTaskApp
 
         string key;
 
-
-
-
-
         #endregion
+
+        public CalendarTask() { }
+
+        public CalendarTask(Dictionary<string, List<string>> dictionary)
+        {
+            myDictionary = dictionary;
+        }
 
         public void CalendarAppGo()
         {
-            InitializeCalendar();
+            ReadData();
 
             Console.WriteLine("Welcome in Calendar Task program.");
 
@@ -46,10 +49,7 @@ namespace CalendarTaskApp
                         }
                     case 2:
                         {
-                            foreach (var day in myDictionary)
-                            {
-                                Console.WriteLine(DisplayDayData(day));
-                            }
+                            ShowTasks();
                             CalendarDisplay();
                             break;
                         }
@@ -68,48 +68,16 @@ namespace CalendarTaskApp
                 }
             }
 
-            using (StreamWriter file = new StreamWriter(destPath))
-                foreach (var entry in myDictionary)
-                    file.WriteLine("{0} - {1}", entry.Key, entry.Value);
+            WriteData();
+
         }
 
-        private void InitializeCalendar()
-        {
-            if (File.Exists(destPath))
-            {
-                using (var day = new StreamReader(destPath))
-                {
-                    List<string> myList = new List<string>();
-                    string line = null;
-                    while ((line = day.ReadLine()) != null)
-                    {
-                        var parts = line.Split('-');
-                        key = parts[0];
+        //private string DisplayDayData(KeyValuePair<string, List<string>> selectedDate)
+        //{
 
-                        //check
-                        // var str = line.Substring(11, line.Length);
+        //    return $"Date: {selectedDate.Key} Task: {selectedDate.Value}";
 
-                        var lineValue = line.Replace(line.Substring(0, 11), "");
-                        var partsValue = lineValue.Split(';');
-
-                        foreach (var part in partsValue)
-                        {
-                            myList.Add(part);
-                        }
-
-                        myDictionary.Add(key, myList);
-                    }
-                }
-            }
-        }
-
-        private string DisplayDayData(KeyValuePair<string, List<string>> selectedDate)
-        {
-
-
-            return $"Date: {selectedDate.Key} Task: {selectedDate.Value}";
-        }
-
+        //}
         public void CalendarDisplay()
         {
             var dateTime = DateTime.UtcNow;
@@ -131,44 +99,84 @@ namespace CalendarTaskApp
             }
 
         }
-
         public void EnterTask()
         {
 
             Console.WriteLine("Please enter a date time (dd/MM/yyyy)");
-
             string date = Console.ReadLine();
             bool dateCorrect;
+            List<string> myList = new List<string>();
 
-            dateCorrect = DateTime.TryParseExact(date, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out date2);
+            dateCorrect = DateTime.TryParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out date2);
 
-            //if (dateCorrect == false)
-            //{
-            //    throw new Exception("Incorrect date format");
-
-            //}
-
+            if (dateCorrect == false)
+            {
+                throw new Exception("Incorrect date format");
+            }
             Console.WriteLine("Please enter a task");
             string task = Console.ReadLine();
 
+            AddTask(date, task);
+        }
 
-            List<string> myList;
+        public Dictionary<string, List<string>> GetDictionary()
+        {
+            return myDictionary;
+        }
 
-            if (!myDictionary.TryGetValue(key, out myList))
+        public void ShowTasks()
+        {
+            foreach (string key in myDictionary.Keys)
             {
-                myList = new List<string>();
-                myDictionary[key] = myList;
+                foreach (string val in myDictionary[key])
+                {
+                    Console.Write($"Date: {key}, Task: {val}");
+                }
+            }
+        }
+
+        public void ReadData()
+        {
+            if (File.Exists(destPath))
+            {
+                using (var day = new StreamReader(destPath))
+                {
+                    string line = null;
+
+                    while ((line = day.ReadLine()) != null)
+                    {
+                        string[] parts = line.Split(new string[1] { "##-mySeparator-##" }, StringSplitOptions.RemoveEmptyEntries);
+                        key = parts[0];
+                        AddTask(key, parts[1]);
+                    }
+                }
+            }
+        }
+
+        public void WriteData()
+        {
+            using (StreamWriter file = new StreamWriter(destPath))
+            {
+                foreach (var entry in myDictionary)
+                {
+                    foreach (var task in entry.Value)
+                    {
+                        file.WriteLine($"{entry.Key} ##-mySeparator-## {task}");
+                    }
+                }
+            }
+        }
+
+
+        public void AddTask(string key, string task)
+        {
+            if (myDictionary.ContainsKey(key))
+            {
+                myDictionary[key].Add(task);
+                return;
             }
 
-            myList.Add(task);
-            myDictionary.Add(date2.ToShortDateString(), myList);
-
-
-
-            //Console.WriteLine("Key you entered alerady exist. Try again");
-            //EnterTask();
-
-
+            myDictionary.Add(key, new List<string>() { task });
         }
 
     }
@@ -192,31 +200,23 @@ namespace CalendarTaskApp
 
 
 /* var dateTime = DateTime.UtcNow;
-
  Console.WriteLine(dateTime.ToUniversalTime()
               .ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'"));
  Console.WriteLine(dateTime.ToString());
  Console.WriteLine(dateTime.ToShortTimeString());
  Console.Write("Nasz czas: ");
  Console.WriteLine(TimeZoneInfo.ConvertTime(dateTime, TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time")));
-
  Console.WriteLine(dateTime.Year);
  Console.WriteLine(dateTime.Month);
  Console.WriteLine(dateTime.Day);
-
  Console.WriteLine();
-
  var dateTime2 = new DateTime(2022, 02, 27);
-
  Console.WriteLine(GetDateTimeString(dateTime2.AddDays(1)));
  Console.WriteLine(GetDateTimeString(dateTime2.AddDays(2)));
  Console.WriteLine(GetDateTimeString(dateTime2.AddDays(3)));
  Console.WriteLine(GetDateTimeString(dateTime2.AddDays(4)));
-
  Console.ReadLine();
-
 }
-
 private static string GetDateTimeString(DateTime dateTime)
 {
  return $"This is a day {dateTime.Day}, of a month {dateTime.Month} of a year {dateTime.Year}.";
