@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 
 namespace CalendarTaskApp
@@ -9,193 +8,71 @@ namespace CalendarTaskApp
     {
         #region My Variables
 
-        int numberToChose = 0;
         readonly string destPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "taskFile.txt");
 
-        Dictionary<string, List<string>> myDictionary = new Dictionary<string, List<string>>();
-
-        DateTime date2;
-
-        string key;
+        Dictionary<DateTime, List<MyTask>> myDictionary = new Dictionary<DateTime, List<MyTask>>();
 
         #endregion
 
         public CalendarTask() { }
 
-        public CalendarTask(Dictionary<string, List<string>> dictionary)
+        public CalendarTask(Dictionary<DateTime, List<MyTask>> dictionary)
         {
             myDictionary = dictionary;
         }
 
-        public void CalendarAppGo()
+        public Dictionary<DateTime, List<MyTask>> GetTasksDictionary()
         {
-            ReadData();
 
-            Console.WriteLine("Welcome in Calendar Task program.");
-
-            CalendarDisplay();
-
-            bool choseValue = true;
-
-            while (choseValue)
-            {
-                switch (numberToChose)
-                {
-                    case 1:
-                        {
-                            EnterTask();
-                            CalendarDisplay();
-                            break;
-                        }
-                    case 2:
-                        {
-                            ShowTasks();
-                            CalendarDisplay();
-                            break;
-                        }
-                    case 3:
-                        {
-                            choseValue = false;
-                            break;
-
-                        }
-                    default:
-                        {
-                            Console.WriteLine("Wrong number");
-                            CalendarDisplay();
-                            break;
-                        }
-                }
-            }
-
-            WriteData();
-
+            return myDictionary;
         }
 
-        //private string DisplayDayData(KeyValuePair<string, List<string>> selectedDate)
-        //{
-
-        //    return $"Date: {selectedDate.Key} Task: {selectedDate.Value}";
-
-        //}
         public void CalendarDisplay()
         {
-            var dateTime = DateTime.UtcNow;
-            Console.WriteLine(dateTime.ToString());
-            Console.WriteLine();
             Console.WriteLine("Please chose number (1-3) to get action:");
             Console.WriteLine("1 - add a task for your list");
             Console.WriteLine("2 - view a month tasks");
             Console.WriteLine("3 - save task list and exit program");
-
-            try
-            {
-                numberToChose = Int32.Parse(Console.ReadLine());
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Wrong input format. Please enter number");
-                CalendarDisplay();
-            }
-
-        }
-        public void EnterTask()
-        {
-
-            Console.WriteLine("Please enter a date time (dd/MM/yyyy)");
-            string date = Console.ReadLine();
-            bool dateCorrect;
-            List<string> myList = new List<string>();
-
-            dateCorrect = DateTime.TryParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out date2);
-
-            if (dateCorrect == false)
-            {
-                throw new Exception("Incorrect date format");
-            }
-            Console.WriteLine("Please enter a task");
-            string task = Console.ReadLine();
-
-            AddTask(date, task);
         }
 
-        public Dictionary<string, List<string>> GetDictionary()
-        {
-            return myDictionary;
-        }
 
         public void ShowTasks()
         {
-            foreach (string key in myDictionary.Keys)
+            foreach (DateTime key in myDictionary.Keys)
             {
-                foreach (string val in myDictionary[key])
+                foreach (MyTask val in myDictionary[key])
                 {
-                    Console.Write($"Date: {key}, Task: {val}");
+                    Console.WriteLine($"Date: {key.ToShortDateString()}, Task: {val}");
                 }
             }
         }
 
-        public void ReadData()
+        public void AddTask(DateTime key, string task, Priority priority = Priority.Medium)
         {
-            if (File.Exists(destPath))
-            {
-                using (var day = new StreamReader(destPath))
-                {
-                    string line = null;
 
-                    while ((line = day.ReadLine()) != null)
-                    {
-                        string[] parts = line.Split(new string[1] { "##-mySeparator-##" }, StringSplitOptions.RemoveEmptyEntries);
-                        key = parts[0];
-                        AddTask(key, parts[1]);
-                    }
-                }
-            }
-        }
-
-        public void WriteData()
-        {
-            using (StreamWriter file = new StreamWriter(destPath))
-            {
-                foreach (var entry in myDictionary)
-                {
-                    foreach (var task in entry.Value)
-                    {
-                        file.WriteLine($"{entry.Key} ##-mySeparator-## {task}");
-                    }
-                }
-            }
-        }
-
-
-        public void AddTask(string key, string task)
-        {
             if (myDictionary.ContainsKey(key))
             {
-                myDictionary[key].Add(task);
+                myDictionary[key].Add(new MyTask() { Name = task, Priority = priority });
                 return;
             }
-
-            myDictionary.Add(key, new List<string>() { task });
+            myDictionary.Add(key, new List<MyTask>() { new MyTask() { Name = task, Priority = priority } });
         }
 
-    }
-
-    public enum Priority
-    {
-        Low = 1,
-        Medium = 2,
-        High = 3
-    }
-
-    class MyTask
-    {
-        public DateTime Date { get; set; }
-        public string Name { get; set; }
-        public Priority Priority { get; set; }
     }
 
 }
+
+
+
+
+//    class MyTask
+//    {
+//        public DateTime Date { get; set; }
+//        public string Name { get; set; }
+//        public Priority Priority { get; set; }
+//    }
+
+//}
 
 
 
