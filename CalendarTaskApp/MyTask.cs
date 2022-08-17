@@ -1,10 +1,14 @@
-﻿namespace CalendarTaskApp
+﻿using System;
+
+namespace CalendarTaskApp
 {
     internal class MyTask
     {
 
         public string Name { get; set; }
+        public DateTime DateTime { get; set; }
         public Priority Priority { get; set; }
+        public bool IsCompleted { get; set; } = false;
 
     }
 

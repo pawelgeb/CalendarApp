@@ -6,3 +6,6 @@ C:\Projects\CalendarTaskApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.csproj.Sug
 C:\Projects\CalendarTaskApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.csproj.CoreCompileInputs.cache
 C:\Projects\CalendarTaskApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.exe
 C:\Projects\CalendarTaskApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.pdb
+C:\Projects\CalendarTaskApp\CalendarTaskApp\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\CalendarTaskApp\CalendarTaskApp\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\CalendarTaskApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.csproj.CopyComplete

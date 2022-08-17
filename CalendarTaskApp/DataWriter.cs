@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -6,20 +7,31 @@ namespace CalendarTaskApp
 {
     public static class DataWriter
     {
-        readonly static string destPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "taskFile.txt");
-        public static void Write(Dictionary<DateTime, List<string>> dictionary)
+        //readonly static string destPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "taskFile.txt");
+        //internal static void Write2(Dictionary<DateTime, List<MyTask>> dictionary)
+        //{
+        //    using (StreamWriter file = new StreamWriter(destPath))
+        //    {
+        //        foreach (var entry in dictionary)
+        //        {
+        //            foreach (var task in entry.Value)
+        //            {
+        //                file.WriteLine($"{entry.Key.ToShortDateString()} ##-mySeparator-## {task.Name} ##-mySeparator-## {task.Priority}");
+        //            }
+        //        }
+        //    }
+
+        //}
+
+        readonly static string destPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "taskFileJson.json");
+
+        internal static void Write(List<MyTask> myList)
         {
-            using (StreamWriter file = new StreamWriter(destPath))
-            {
-                foreach (var entry in dictionary)
-                {
-                    foreach (var task in entry.Value)
-                    {
-                        file.WriteLine($"{entry.Key.ToShortDateString()} ##-mySeparator-## {task}");
-                    }
-                }
-            }
+
+            string dictionaryJson = JsonConvert.SerializeObject(myList, Formatting.Indented);
+            File.WriteAllText(destPath, dictionaryJson, System.Text.Encoding.UTF8);
         }
-        //throw new NotImplementedException();
     }
 }
+
+//throw new NotImplementedException();
