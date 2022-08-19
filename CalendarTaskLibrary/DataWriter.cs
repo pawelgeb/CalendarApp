@@ -1,7 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.IO;
 
 namespace CalendarTaskApp
 {
@@ -27,7 +24,6 @@ namespace CalendarTaskApp
 
         public static void Write(List<MyTask> myList)
         {
-
             string dictionaryJson = JsonConvert.SerializeObject(myList, Formatting.Indented);
             File.WriteAllText(destPath, dictionaryJson, System.Text.Encoding.UTF8);
         }

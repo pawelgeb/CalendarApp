@@ -5,26 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalendarTaskWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800
-        ">
+        Title="CalculatorTaskProgram" Height="500 " Width="800">
+    <StackPanel>
+        <Label FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top">
+            Calculator Task Program
+        </Label>
+        <Button Click="Button_Click" Content="Add new task to Calendar" Height="70" Width="200" HorizontalAlignment="Right" Margin="0,0,20,0"/>
+        <Button Content="Button" Height="70" Width="200" HorizontalAlignment="Right" Margin="0,10,20,0"/>
+    </StackPanel>
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="52*"/>
-            <ColumnDefinition Width="52*"/>
-            <ColumnDefinition Width="307*"/>
-            <ColumnDefinition Width="30*"/>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="159*"/>
-        </Grid.ColumnDefinitions>
-        <DatePicker HorizontalAlignment="Left" Margin="144,39,0,0" VerticalAlignment="Top" Grid.Column="2"/>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="3" Margin="11,100,241,35">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Button Content="Add Task" HorizontalAlignment="Left" Margin="82,100,0,0" VerticalAlignment="Top" Background="#FFB4E4B4" Grid.Column="2"/>
-    </Grid>
 </Window>
+    
+    

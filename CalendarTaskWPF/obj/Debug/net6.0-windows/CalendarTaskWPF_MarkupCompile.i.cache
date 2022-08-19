@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Paweł\source\repos\CalendarApp\CalendarTaskWPF\obj\Debug\net6.0-windows\
+C:\Projects\CalendarTaskApp_rep\CalendarTaskWPF\obj\Debug\net6.0-windows\
 CalendarTaskWPF
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\Paweł\source\repos\CalendarApp\CalendarTaskWPF\App.xaml
-11407045341
+C:\Projects\CalendarTaskApp_rep\CalendarTaskWPF\App.xaml
+2416618954
 
-51892851504
-1962027144405
-MainWindow.xaml;
+62091985539
+196-2131123493
+MainWindow.xaml;NewWindow.xaml;
 
-False
+True
 

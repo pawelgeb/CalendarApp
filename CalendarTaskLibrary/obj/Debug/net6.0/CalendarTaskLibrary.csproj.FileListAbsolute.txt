@@ -10,3 +10,15 @@ C:\Users\Paweł\source\repos\CalendarApp\CalendarTaskLibrary\obj\Debug\net6.0\Ca
 C:\Users\Paweł\source\repos\CalendarApp\CalendarTaskLibrary\obj\Debug\net6.0\refint\CalendarTaskLibrary.dll
 C:\Users\Paweł\source\repos\CalendarApp\CalendarTaskLibrary\obj\Debug\net6.0\CalendarTaskLibrary.pdb
 C:\Users\Paweł\source\repos\CalendarApp\CalendarTaskLibrary\obj\Debug\net6.0\ref\CalendarTaskLibrary.dll
+C:\Projects\CalendarTaskApp_rep\CalendarTaskLibrary\bin\Debug\net6.0\CalendarTaskLibrary.deps.json
+C:\Projects\CalendarTaskApp_rep\CalendarTaskLibrary\bin\Debug\net6.0\CalendarTaskLibrary.dll
+C:\Projects\CalendarTaskApp_rep\CalendarTaskLibrary\bin\Debug\net6.0\CalendarTaskLibrary.pdb
+C:\Projects\CalendarTaskApp_rep\CalendarTaskLibrary\obj\Debug\net6.0\CalendarTaskLibrary.csproj.AssemblyReference.cache
+C:\Projects\CalendarTaskApp_rep\CalendarTaskLibrary\obj\Debug\net6.0\CalendarTaskLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\CalendarTaskApp_rep\CalendarTaskLibrary\obj\Debug\net6.0\CalendarTaskLibrary.AssemblyInfoInputs.cache
+C:\Projects\CalendarTaskApp_rep\CalendarTaskLibrary\obj\Debug\net6.0\CalendarTaskLibrary.AssemblyInfo.cs
+C:\Projects\CalendarTaskApp_rep\CalendarTaskLibrary\obj\Debug\net6.0\CalendarTaskLibrary.csproj.CoreCompileInputs.cache
+C:\Projects\CalendarTaskApp_rep\CalendarTaskLibrary\obj\Debug\net6.0\CalendarTaskLibrary.dll
+C:\Projects\CalendarTaskApp_rep\CalendarTaskLibrary\obj\Debug\net6.0\refint\CalendarTaskLibrary.dll
+C:\Projects\CalendarTaskApp_rep\CalendarTaskLibrary\obj\Debug\net6.0\CalendarTaskLibrary.pdb
+C:\Projects\CalendarTaskApp_rep\CalendarTaskLibrary\obj\Debug\net6.0\ref\CalendarTaskLibrary.dll

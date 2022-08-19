@@ -1,0 +1,39 @@
+﻿<Window x:Class="CalendarTaskWPF.NewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalendarTaskWPF"
+        mc:Ignorable="d"
+        Title="Add your new task" Height="450" Width="800">
+
+    <StackPanel>
+        <Label FontSize="15
+               " HorizontalAlignment="Left" VerticalAlignment="Top">
+            Chose task data:
+        </Label>
+        <Calendar x:Name="taskCalendar" HorizontalAlignment="Left" ContextMenuClosing="Calendar_Task"/>
+        <Label FontSize="15
+               " HorizontalAlignment="Left" VerticalAlignment="Top">
+            Add task:
+        </Label>
+        <TextBox x:Name="textBoxTask" ContextMenuClosing="Text_Box"></TextBox>
+        <Label FontSize="15
+               " HorizontalAlignment="Left" VerticalAlignment="Top">
+            Chose Priority:
+        </Label>
+        <ComboBox x:Name="ComboBoxTask" ContextMenuClosing="ComboBox_Task">
+            <ComboBoxItem>
+                Low
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Medium
+            </ComboBoxItem>
+            <ComboBoxItem>
+                High
+            </ComboBoxItem>
+        </ComboBox>
+        <Button Content="Save Task" Height="71" Width="212" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" FontSize="15" Click="SaveTask"/>
+
+    </StackPanel>
+</Window>

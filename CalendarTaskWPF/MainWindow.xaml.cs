@@ -1,18 +1,5 @@
-﻿using CalendarTaskApp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CalendarTaskWPF
 {
@@ -21,21 +8,38 @@ namespace CalendarTaskWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        //private string text;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            //text = "nasz nowy standardowy tedst";
+            //naszTextBox.Text = text;
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-            CalendarTask myTask = new CalendarTask(DataReader.Read());
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NewWindow window2 = new NewWindow();
+            window2.Show();
+            //var result = MessageBox.Show(naszTextBox.Text, text, MessageBoxButton.YesNo);
+            //if (result == MessageBoxResult.No)
+            //{
+            //    text = "kliknięto 'NO'";
+            //    naszTextBox.Text = text;
+            //}
 
-            foreach (var task in myTask.GetTasksDictionary())
-            {
-                Console.WriteLine($"Date: {task.DateTime} Task: {task.Name} Priority: {task.Priority}");
-            }
+            //if (result == MessageBoxResult.Yes)
+            //{
+            //    text = "kliknięto 'YES'";
+            //    naszTextBox.Text = text;
+
         }
     }
 }
+

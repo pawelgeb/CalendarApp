@@ -66,19 +66,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Paweł\\.nuget\\packages\\": {}
+    "C:\\Users\\user3\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Paweł\\source\\repos\\CalendarApp\\CalendarTaskWPF\\CalendarTaskWPF.csproj",
+      "projectUniqueName": "C:\\Projects\\CalendarTaskApp_rep\\CalendarTaskWPF\\CalendarTaskWPF.csproj",
       "projectName": "CalendarTaskWPF",
-      "projectPath": "C:\\Users\\Paweł\\source\\repos\\CalendarApp\\CalendarTaskWPF\\CalendarTaskWPF.csproj",
-      "packagesPath": "C:\\Users\\Paweł\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Paweł\\source\\repos\\CalendarApp\\CalendarTaskWPF\\obj\\",
+      "projectPath": "C:\\Projects\\CalendarTaskApp_rep\\CalendarTaskWPF\\CalendarTaskWPF.csproj",
+      "packagesPath": "C:\\Users\\user3\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\CalendarTaskApp_rep\\CalendarTaskWPF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Paweł\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user3\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -92,8 +92,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Paweł\\source\\repos\\CalendarApp\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj": {
-              "projectPath": "C:\\Users\\Paweł\\source\\repos\\CalendarApp\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj"
+            "C:\\Projects\\CalendarTaskApp_rep\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj": {
+              "projectPath": "C:\\Projects\\CalendarTaskApp_rep\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj"
             }
           }
         }
@@ -113,7 +113,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -125,7 +126,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
