@@ -9,3 +9,14 @@ C:\Projects\CalendarTaskApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.pdb
 C:\Projects\CalendarTaskApp\CalendarTaskApp\bin\Debug\Newtonsoft.Json.dll
 C:\Projects\CalendarTaskApp\CalendarTaskApp\bin\Debug\Newtonsoft.Json.xml
 C:\Projects\CalendarTaskApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.csproj.CopyComplete
+C:\Users\Paweł\Source\Repos\CalendarApp\CalendarTaskApp\bin\Debug\CalendarTaskApp.exe.config
+C:\Users\Paweł\Source\Repos\CalendarApp\CalendarTaskApp\bin\Debug\CalendarTaskApp.exe
+C:\Users\Paweł\Source\Repos\CalendarApp\CalendarTaskApp\bin\Debug\CalendarTaskApp.pdb
+C:\Users\Paweł\Source\Repos\CalendarApp\CalendarTaskApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Paweł\Source\Repos\CalendarApp\CalendarTaskApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Paweł\Source\Repos\CalendarApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.csproj.AssemblyReference.cache
+C:\Users\Paweł\Source\Repos\CalendarApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Paweł\Source\Repos\CalendarApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.csproj.CoreCompileInputs.cache
+C:\Users\Paweł\Source\Repos\CalendarApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.csproj.CopyComplete
+C:\Users\Paweł\Source\Repos\CalendarApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.exe
+C:\Users\Paweł\Source\Repos\CalendarApp\CalendarTaskApp\obj\Debug\CalendarTaskApp.pdb

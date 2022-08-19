@@ -46,11 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalendarTask.cs" />
-    <Compile Include="DataReader.cs" />
-    <Compile Include="DataWriter.cs" />
-    <Compile Include="InputFromUser.cs" />
-    <Compile Include="MyTask.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
