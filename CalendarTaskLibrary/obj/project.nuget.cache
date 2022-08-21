@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "FTbTllp4MeU73KwGzmMAk9s6NS1b7rMLEtyQjZAwJXUajdY+yDIibAIuCWsYLv+1CwAYIzOsEAT6c40egnLkKw==",
+  "dgSpecHash": "vzYmo9K1d/HWLnoXC/PL1tRy62i03jYoeOC7NEOL0Ozh79fLdcZGUH/skiM7NCTbIdzCfYKedTJgibYdgEcuow==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\CalendarTaskApp_rep\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj",
+  "projectFilePath": "C:\\Users\\Paweł\\source\\repos\\CalendarApp\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\user3\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Paweł\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

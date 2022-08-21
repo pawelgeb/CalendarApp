@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\CalendarTaskApp_rep\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj": {}
+    "C:\\Users\\Paweł\\source\\repos\\CalendarApp\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\CalendarTaskApp_rep\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj": {
+    "C:\\Users\\Paweł\\source\\repos\\CalendarApp\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\CalendarTaskApp_rep\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Paweł\\source\\repos\\CalendarApp\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj",
         "projectName": "CalendarTaskLibrary",
-        "projectPath": "C:\\Projects\\CalendarTaskApp_rep\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj",
-        "packagesPath": "C:\\Users\\user3\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\CalendarTaskApp_rep\\CalendarTaskLibrary\\obj\\",
+        "projectPath": "C:\\Users\\Paweł\\source\\repos\\CalendarApp\\CalendarTaskLibrary\\CalendarTaskLibrary.csproj",
+        "packagesPath": "C:\\Users\\Paweł\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Paweł\\source\\repos\\CalendarApp\\CalendarTaskLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Paweł\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,8 +51,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -61,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using CalendarTaskApp;
+using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace CalendarTaskWPF
@@ -9,10 +11,17 @@ namespace CalendarTaskWPF
     public partial class MainWindow : Window
     {
         //private string text;
-
+        CalendarTask myTask = new CalendarTask(DataReader.Read());
         public MainWindow()
         {
             InitializeComponent();
+            List_Task.ItemsSource = myTask.GetTasksDictionary();
+            foreach (var task in myTask.GetTasksDictionary())
+            {
+
+            }
+
+
 
             //text = "nasz nowy standardowy tedst";
             //naszTextBox.Text = text;
@@ -38,6 +47,14 @@ namespace CalendarTaskWPF
             //{
             //    text = "kliknięto 'YES'";
             //    naszTextBox.Text = text;
+
+        }
+
+        private void ViewTask_ListView(object sender, ContextMenuEventArgs e)
+        {
+
+
+
 
         }
     }

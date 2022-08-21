@@ -12,7 +12,7 @@
                " HorizontalAlignment="Left" VerticalAlignment="Top">
             Chose task data:
         </Label>
-        <Calendar x:Name="taskCalendar" HorizontalAlignment="Left" ContextMenuClosing="Calendar_Task"/>
+        <Calendar x:Name="taskCalendar" HorizontalAlignment="Left"/>
         <Label FontSize="15
                " HorizontalAlignment="Left" VerticalAlignment="Top">
             Add task:
@@ -22,18 +22,20 @@
                " HorizontalAlignment="Left" VerticalAlignment="Top">
             Chose Priority:
         </Label>
-        <ComboBox x:Name="ComboBoxTask" ContextMenuClosing="ComboBox_Task">
+        <ComboBox x:Name="ComboBoxTask">
             <ComboBoxItem>
-                Low
+                1
             </ComboBoxItem>
             <ComboBoxItem>
-                Medium
+                2
             </ComboBoxItem>
             <ComboBoxItem>
-                High
+                3
             </ComboBoxItem>
         </ComboBox>
         <Button Content="Save Task" Height="71" Width="212" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" FontSize="15" Click="SaveTask"/>
+        <Grid Height="100"/>
+        <Calendar/>
 
     </StackPanel>
 </Window>

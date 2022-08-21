@@ -50,3 +50,5 @@ C:\Projects\CalendarTaskApp_rep\CalendarTaskWPF\obj\Debug\net6.0-windows\Calenda
 C:\Projects\CalendarTaskApp_rep\CalendarTaskWPF\obj\Debug\net6.0-windows\ref\CalendarTaskWPF.dll
 C:\Projects\CalendarTaskApp_rep\CalendarTaskWPF\obj\Debug\net6.0-windows\NewWindow.g.cs
 C:\Projects\CalendarTaskApp_rep\CalendarTaskWPF\obj\Debug\net6.0-windows\NewWindow.baml
+C:\Users\Paweł\source\repos\CalendarApp\CalendarTaskWPF\obj\Debug\net6.0-windows\NewWindow.g.cs
+C:\Users\Paweł\source\repos\CalendarApp\CalendarTaskWPF\obj\Debug\net6.0-windows\NewWindow.baml

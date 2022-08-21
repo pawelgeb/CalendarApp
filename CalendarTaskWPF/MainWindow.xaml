@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalendarTaskWPF"
         mc:Ignorable="d"
-        Title="CalculatorTaskProgram" Height="500 " Width="800">
-    <StackPanel>
+        Title="CalculatorTaskProgram" Height="511" Width="800">
+    <Grid>
         <Label FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top">
             Calculator Task Program
         </Label>
-        <Button Click="Button_Click" Content="Add new task to Calendar" Height="70" Width="200" HorizontalAlignment="Right" Margin="0,0,20,0"/>
-        <Button Content="Button" Height="70" Width="200" HorizontalAlignment="Right" Margin="0,10,20,0"/>
-    </StackPanel>
+        <Button Click="Button_Click" Content="Add new task to Calendar" Height="70" Width="200" HorizontalAlignment="Right" Margin="0,65,20,360"/>
+        <Button Content="Button" Height="70" Width="200" HorizontalAlignment="Right" Margin="0,152,20,273"/>
+        <ListBox Name="List_Task" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,88,501,139"/>
+    </Grid>
 
 </Window>
     
